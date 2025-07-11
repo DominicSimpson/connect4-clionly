@@ -80,9 +80,6 @@ class Board { // Board class representing constructor
 
 }
 
-
-
-
 class Game { // the Game class representing constructor
     constructor() {
         this.board = new Board(); // creates new instance of the Board constructor
