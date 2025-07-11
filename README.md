@@ -4,13 +4,9 @@
 
 ## A gameplay example shows the first player starting Connect Four by dropping one of their yellow discs into the center column of an empty game board. The two players then alternate turns dropping one of their discs at a time into an unfilled column, until the second player, with red discs, achieves a diagonal four in a row, and wins the game. If the board fills up before either player achieves four in a row, then the game is a draw.
 
-
-
-
 ![Connect4 screenshot for reference](assets/connect4image_forreference.jpg)
 
 
-<!---
 PSEUDOCODE:
 Create Game object to hold Board + Player 1 + Player 2 objects
 Create Connect4 board grid object 
