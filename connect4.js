@@ -18,7 +18,7 @@ class Board { // Board class representing constructor
     dropToken(column, playerId) { // method 'drops' token into a column of six circle slots
         for (let row = 5; row >= 0; row--) { // starts from bottom row (5, as outined in pseudocode) and works upwards (hence decrementing)
             // as a physical Connect 4 game did
-            if (this.grid[row][column] === 0) { // finds the first empty circle slot and sets that cell to playerId 1 or 2 
+            if (this.grid[row][column] === 0) { // finds the first empty circle slot and sets that circle slot to playerId 1 or 2 
                 this.grid[row][column] = playerId;
                 return true; //returns true if 'drop' is successful
             }
@@ -28,7 +28,7 @@ class Board { // Board class representing constructor
 }
 
 
-class Game { // the game constructor
+class Game { // the Game class representing constructor
     contructor() {
         this.board = new Board(); // creates new instance of the Board constructor
         this.player1 = new Player1; // creates new instance of Player constructor for Player1
