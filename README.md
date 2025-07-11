@@ -39,6 +39,7 @@ function Game { //Game prototype
 
 }
 
+Visual representation of board:
 
 connect4board = {
   grid: [
@@ -64,7 +65,7 @@ connect4board = {
 
 if (circle is empty) {
     drop token into circle;
-    else circle is not empty
+    else circle is not emptys
 }
 
 
@@ -73,6 +74,15 @@ if (circle is empty) {
 Game class - each game is an instance of Game class, contains all other classes.
 Board class - check grid state, function dropPiece, function checkWin, function checkDraw, display new grid state, 
 Player class - base class for Player 1 & Player 2, contains playerInput
+
+
+
+class Player {
+    constructor(name, tokenColour){
+        this.name = prompt(`Please enter ur name: `)
+        this.token = token
+    }
+}
 
 
 
