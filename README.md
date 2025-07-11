@@ -27,18 +27,10 @@ Create rows = [1, 2, 3, 4, 5, 6]
 function Game { //Game prototype
     contains variables above
 
-    nested loop to populate the connect4grid with columns and rows
     
 // Populates the grid with each circle via a nested loop. X and Y are based on the normal coordinate system of
 // x: horizontal axis, y: vertical axis
 
-    function initalizeBoard {
-        for loop (let i = 0; i < columns i++) {
-            nested for loop (let j = 0; j < rows; j++) {
-                const div = createElement in javascript rather than DOM
-                connect4board.appendChild(div)
-            
-            }
         
         }
     
