@@ -34,7 +34,7 @@ class Board { // Board class representing constructor
         const rows = this.grid.length;
         const cols = this.grid[0].length;
 
-        for (let row = 0; row < rows; rows++){
+        for (let row = 0; row < rows; row++){
             for (let col = 0; col < cols; col++)  {// Nested for loop
 
             if (this.grid[row][col] !== playerId) continue; // skips empty cells or cells not belonging to current player
@@ -109,23 +109,22 @@ class Game { // the Game class representing constructor
                 console.log("That circle slot is already occupied by a token. Try again.")
                 move = await this.currentPlayer.getMove(); // asks user for new column input
                 
-                if (this.board.checkWin(this.currentPlayer.id)){
-                    this.board.displayBoard();
-                    
-                    console.log(`Player ${this.currentPlayer.name} wins!`);
-                    break;
-                }
 
-                if (this.board.checkDraw()){
-                    this.board.displayBoard();
+            }
+            if (this.board.checkWin(this.currentPlayer.id)){
+                this.board.displayBoard();
+                
+                console.log(`Player ${this.currentPlayer.name} wins!`);
+                break;
+            }
 
-                    console.log(`It's a draw`);
-                    break;
-                }
-                    
+            if (this.board.checkDraw()){
+                this.board.displayBoard();
 
-                // This is where win / draw checking will take place
-            }            
+                console.log(`It's a draw`);
+                break;
+            }
+                
             this.switchPlayer();    
 
         }
