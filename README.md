@@ -15,11 +15,40 @@ PSEUDOCODE:
 Create Game object to hold Board + Player 1 + Player 2 objects
 Create Connect4 board grid object 
 Create Player object -> Player 1 & Player 2 subclasses
-Create coloured token:
-    - yellow token: player1
-    - red token: player2
+Create object? - {
+    "player1": yellowToken,
+    "player2": redToken
+    }
+Create columns = [1, 2, 3, 4, 5, 6, 7]
+Create rows = [1, 2, 3, 4, 5, 6]
 
-game = {
+// need to delineate each circle (A1, A2, A3)
+
+function Game { //Game prototype
+    contains variables above
+
+    nested loop to populate the connect4grid with columns and rows
+    
+// Populates the grid with each circle via a nested loop. X and Y are based on the normal coordinate system of
+// x: horizontal axis, y: vertical axis
+
+    function initalizeBoard {
+        for loop (let i = 0; i < columns i++) {
+            nested for loop (let j = 0; j < rows; j++) {
+                const div = createElement in javascript rather than DOM
+                connect4board.appendChild(div)
+            
+            }
+        
+        }
+    
+    
+    }
+
+}
+
+
+connect4board = {
   grid: [
     [0, 0, 0, 0, 0, 0, 0], // 0 represents empty circle; 1 represents if circle is filled by coloured token
     [0, 0, 0, 0, 0, 0, 0],
@@ -40,3 +69,20 @@ game = {
 
 
 };
+
+if (circle is empty) {
+    drop token into circle;
+    else circle is not empty
+}
+
+
+
+
+Game class - each game is an instance of Game class, contains all other classes.
+Board class - check grid state, function dropPiece, function checkWin, function checkDraw, display new grid state, 
+Player class - base class for Player 1 & Player 2, contains playerInput
+
+
+
+
+
