@@ -7,7 +7,7 @@
 
 
 
-[Connect4 screenshot for reference](assets/connect4image_forreference.jpg)
+![Connect4 screenshot for reference](assets/connect4image_forreference.jpg)
 
 
 <!---
