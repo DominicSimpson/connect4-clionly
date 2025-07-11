@@ -40,15 +40,18 @@ function Game { //Game prototype
 }
 
 Visual representation of board:
+[0, 0, 0, 0, 0, 0, 0], // 0 represents empty circle; 1 represents if circle is filled by coloured token
+
 
 connect4board = {
   grid: [
-    [0, 0, 0, 0, 0, 0, 0], // 0 represents empty circle; 1 represents if circle is filled by coloured token
-    [0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0],
+    column 0 / column 1 / column 2 / column 3 / column 4 / column 5 / column 6
+    [0, 0, 0, 0, 0, 0, 0], // row 0 (top)
+    [0, 0, 0, 0, 0, 0, 0], // row 1
+    [0, 0, 0, 0, 0, 0, 0], // row 2
+    [0, 0, 0, 0, 0, 0, 0], // row 3
+    [0, 0, 0, 0, 0, 0, 0], // row 4
+    [0, 0, 0, 0, 0, 0, 0], // row 5
   ],
   player1: {
     x: 0,

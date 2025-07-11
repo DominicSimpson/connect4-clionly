@@ -1,38 +1,38 @@
-class Board { // Board constructor: 6 rows x 7 columns
+console.log("Hello world!");
+
+class Board { // Board class representing constructor
     constructor() {
-        this.grid = Array.from( { length: 6 }, () => 
+        this.grid = Array.from( { length: 6 }, () => // 6 rows x 7 columns
         Array(7).fill(0)); 
     }
 
-    displayBoard() { //displaying the board
-        console.clear();
-        this.grid.forEach(row => {
-            console.log(row.map(circle => (circle === 0 ? '.' : circle)).join(' '));
+    displayBoard() { //displays the board in CLI
+        console.clear(); // clears terinal screen
+        this.grid.forEach(row => { // for each row in board:
+            console.log(row.map(circleSlot => (circleSlot === 0 ? '.' : circleSlot)).join(' ')); // map converts 0 to '.' to visually
+            // represent empty circle slot; join puts space between characters for formatting
         });
-        console.log(circle, "0 1 2 3 4 5 6/n")
+        console.log("0 1 2 3 4 5 6\n") // prints column headers
     }
 
-    dropToken(column, playerId) {
-        for (let row = 5; row >= 0; row--) {
-            if (this.grid[row][column] === 0) {
+    dropToken(column, playerId) { // method 'drops' token into a column of six circle slots
+        for (let row = 5; row >= 0; row--) { // starts from bottom row (5, as outined in pseudocode) and works upwards (hence decrementing)
+            // as a physical Connect 4 game did
+            if (this.grid[row][column] === 0) { // finds the first empty circle slot and sets that cell to playerId 1 or 2 
                 this.grid[row][column] = playerId;
-                return true;
+                return true; //returns true if 'drop' is successful
             }
         }
-        return false;
+        return false; //returns false if column is full with tokens
     }
-
-
-
 }
-
 
 
 class Game { // the game constructor
     contructor() {
         this.board = new Board(); // creates new instance of the Board constructor
-        this.player1 = new Player(1); // creates new instance of Player constructor for Player1
-        this.player2 = new Player(2); // creates new instance of Player constructor for Player2
+        this.player1 = new Player1; // creates new instance of Player constructor for Player1
+        this.player2 = new Player2; // creates new instance of Player constructor for Player2
         this.currentPlayer = this.player1; // defaults to Player1 as current player
     }
 
