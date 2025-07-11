@@ -1,14 +1,15 @@
-# connect4-clionly
+# Connect 4 - Command Line Interface only
 
 # By Dominic Simpson and Osman Teklies - a Hackathon project for La Fosse
 
 ![Connect4 screenshot for reference](assets/connect4image_forreference.jpg)
 
-### I have many good memories of playing Connect Four as a kid, back when board games where still a big thing (not sure if they are still are in the digital 21st century age). Connect Four (also known as Connect 4, Four Up, Plot Four, Find Four, Captain's Mistress, Four in a Row, Drop Four, and in the Soviet Union, Gravitrips) is a game in which the players choose a colour and then take turns dropping coloured tokens into a six-row, seven-column vertically suspended grid. The pieces fall straight down, occupying the lowest available space within the column. The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own tokens. It is therefore a type of m,n,k-game (7, 6, 4) with restricted piece placement. Connect Four is a solved game; the first player can always win by playing the right moves.
+#### We have many good memories of playing Connect Four as kids, back when board games where still a big thing (not sure if they are still are in the digital 21st century age). Connect Four (also known as Connect 4, Four Up, Plot Four, Find Four, Captain's Mistress, Four in a Row, Drop Four, and in the Soviet Union, Gravitrips) is a game in which the players choose a colour and then take turns dropping coloured tokens into a six-row, seven-column vertically suspended grid. The pieces fall straight down, occupying the lowest available space within the column. The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own tokens. It is therefore a type of m,n,k-game (7, 6, 4) with restricted piece placement. Connect Four is a solved game; the first player can always win by playing the right moves.
 
-### A gameplay example shows the first player starting Connect 4 by dropping one of their yellow discs into the center column of an empty game board. The two players then alternate turns dropping one of their discs at a time into an unfilled column, until the second player, with red discs, achieves a diagonal four in a row, and wins the game. If the board fills up before either player achieves four in a row, then the game is a draw.
+#### A gameplay example shows the first player starting Connect 4 by dropping one of their yellow discs into the center column of an empty game board. The two players then alternate turns dropping one of their discs at a time into an unfilled column, until the second player, with red discs, achieves a diagonal four in a row, and wins the game. If the board fills up before either player achieves four in a row, then the game is a draw.
 
-### I have loosely used the template taken from my [Theseus & the Minotaur](https://dominicsimpson.github.io/facprojectsix/) project when constructing the Board class for this project. However, that project used HTML and CSS files alongside my JavaScript, allowing the JavaScript to target DOM elements. In this project, by contrast, we are relying on using the Command Line Interface (CLI) only. Therefore, there is no DOM representation, and no HTML and CSS files.
+#### I have loosely used the template taken from my [Theseus & the Minotaur](https://dominicsimpson.github.io/facprojectsix/) project when constructing the Board class for this project. However, that project used HTML and CSS files alongside my JavaScript, allowing the JavaScript to target DOM elements. In this project, by contrast, we are relying on using the Command Line Interface (CLI) only. Therefore, there is no DOM representation, and no HTML and CSS files.
+
 ### There is only JavaScript.
 
 ![Screenshot of Connect4 grid in CLI](assets/nodescreenshot.png)
@@ -17,9 +18,23 @@
 1. Board - to display the board
 2. Game - for game functionality
 3. Player - for defining the two players
-##
+
 
 #### Player 1 & 2's inputs were captured as X and O tokens and displayed on each circle slot. The columns were labelled 0-6 and the player would select a number to place their token.
+
+
+
+## Installation
+Using the terminal, input:
+
+1. `npm install prompt-sync` for the prompt function in the CLI
+
+## Running the game
+Using the terminal, input:
+
+1.  `node connect4-clionly.js` 
+2.  To quit the game, press `q`
+
 
 ## PSEUDOCODE:
 
