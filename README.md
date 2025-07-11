@@ -27,14 +27,6 @@ function Game { //Game prototype
 // Populates the grid with each circle via a nested loop. X and Y are based on the normal coordinate system of
 // x: horizontal axis, y: vertical axis
 
-        
-        }
-    
-    
-    }
-
-}
-
 Visual representation of board:
 [0, 0, 0, 0, 0, 0, 0], // 0 represents empty circle; 1 represents if circle is filled by coloured token
 
