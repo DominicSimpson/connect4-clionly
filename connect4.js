@@ -7,7 +7,7 @@ class Board { // Board class representing constructor
     }
 
     displayBoard() { //displays the board in CLI
-        console.clear(); // clears terinal screen
+        console.clear(); // clears terminal screen
         this.grid.forEach(row => { // for each row in board:
             console.log(row.map(circleSlot => (circleSlot === 0 ? '.' : circleSlot)).join(' ')); // map converts 0 to '.' to visually
             // represent empty circle slot; join puts space between characters for formatting
@@ -39,6 +39,21 @@ class Game { // the Game class representing constructor
     switchPlayer() {
         this.currentPlayer = this.currentPlayer === this.player1 ? this.player2 : this.player1;
         // toggles currentPlayer between 1 and 2 using a ternary operator
+    }
+
+    async start() { // async method for CLI ouput
+        while (true) { // starts infinite loop - game will continue until broken by win or draw break conditon
+            this.board.displayBoard(); // triggers displayBoard method that clears console and prints current board state
+            let move = await this.currentPlayer.getMove(); // asks current player to input column
+            while (!this.board.dropToken(move, this.currentPlayer.id)) { // triggers dropToken method, which returns false if column is full
+                console.log("That circle slot is already occupied by a token. Try again.")
+                move = await this.currentPlayer.getMove(); // asks user for new column input
+
+                // This is where win / draw checking will take place
+            }            
+            this.switchPlayer();    
+
+        }
     }
 }
 
