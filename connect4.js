@@ -89,8 +89,8 @@ class Game { // the Game class representing constructor
 
         const name1 = prompt('Enter name for Player 1: ')
         const name2 = prompt('Enter name for Player 2: ')
-        this.player1 = new Player(name1, X); // creates new instance of Player constructor for Player1
-        this.player2 = new Player(name2, O); // creates new instance of Player constructor for Player2
+        this.player1 = new Player(name1, 'X'); // creates new instance of Player constructor for Player1
+        this.player2 = new Player(name2, 'O'); // creates new instance of Player constructor for Player2
         this.currentPlayer = this.player1; // defaults to Player1 as current player
     }
 
