@@ -110,7 +110,7 @@ class Game { // the Game class representing constructor
                 move = await this.currentPlayer.getMove(); // asks user for new column input
                 
 
-            }
+;            }
             if (this.board.checkWin(this.currentPlayer.id)){
                 this.board.displayBoard();
                 
@@ -129,9 +129,6 @@ class Game { // the Game class representing constructor
 
         }
     }
-
-    
-
 }
 
 
@@ -142,9 +139,18 @@ class Player {
     }
 
     async getMove() {
-        const column = prompt(`Player ${this.name}, input your move by choosing a column (0-6): `);
-        return parseInt(column, 10);
-    }    
+        let input
+        do {
+            input = prompt(`Player ${this.name}, input your move by choosing a column (0-6):`);
+            const column = parseInt(input, 10);
+            if (Number.isInteger(column) && column >= 0 && column <= 6){
+                return column;
+            }
+            console.log('Invalid input. Please enter a number b/w 0-6')
+        }
+        while (true);
+            
+        }
 
 }
 
