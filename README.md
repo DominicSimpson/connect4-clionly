@@ -87,6 +87,28 @@ if (circle slot is empty) {
     else slot circle is not empty
 }
 
+Winner logic:
+HORIZONTAL:    [x][x][x][x]
+VERTICAL:      [x]
+                |
+               [x]
+                |
+               [x]
+                |
+               [x]
+
+DIAGONAL (\):  [x]
+                 [x]
+                   [x]
+                     [x]
+
+DIAGONAL (/):        [x]
+                    [x]
+                   [x]
+                  [x]
+
+
+
 ```
 
 

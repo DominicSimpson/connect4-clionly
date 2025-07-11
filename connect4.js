@@ -1,6 +1,10 @@
 console.log("Hello world!");
 
+const prompt = require('prompt-sync')();
+
+
 class Board { // Board class representing constructor
+
     constructor() {
         this.grid = Array.from( { length: 6 }, () => // 6 rows x 7 columns
         Array(7).fill(0)); 
@@ -29,15 +33,20 @@ class Board { // Board class representing constructor
 
 
 class Game { // the Game class representing constructor
-    contructor() {
+    constructor() {
         this.board = new Board(); // creates new instance of the Board constructor
-        this.player1 = new Player1; // creates new instance of Player constructor for Player1
-        this.player2 = new Player2; // creates new instance of Player constructor for Player2
+
+        const name1 = prompt('Enter name for Player 1: ')
+        const name2 = prompt('Enter name for Player 2: ')
+        this.player1 = new Player(name1, X); // creates new instance of Player constructor for Player1
+        this.player2 = new Player(name2, O); // creates new instance of Player constructor for Player2
         this.currentPlayer = this.player1; // defaults to Player1 as current player
     }
 
     switchPlayer() {
-        this.currentPlayer = this.currentPlayer === this.player1 ? this.player2 : this.player1;
+        this.currentPlayer = this.currentPlayer === this.player1 
+            ? this.player2 
+            : this.player1;
         // toggles currentPlayer between 1 and 2 using a ternary operator
     }
 
@@ -58,40 +67,20 @@ class Game { // the Game class representing constructor
 }
 
 
-
-
-
-
-
-
 class Player {
-    constructor(name) {
-    this.name = name
+    constructor(name, id) {
+    this.name = name;
+    this.id = id;
     }
+
+    async getMove() {
+        const column = prompt(`Player ${this.name}, input your move by choosing a column (0-6): `);
+        return parseInt(column, 10);
+    }    
+
 }
 
+const game = new Game();
+game.start().catch(console.error);
 
 
-class Player1 extends Player {
-    constructor(){
-        const name = prompt('Enter name for Player 1: ')
-        super(name)
-    }
-
-    getMove(){
-        let userChoice = prompt((`${this.name} Input your next move: `).toLowerCase().trim())
-    }
-}
-
-
-class Player2 extends Player {
-    constructor(){
-        const name = prompt('Enter name for Player 2:')
-        super(name)
-    }
-    
-    getMove(){
-        let userChoice = prompt((`${this.name} Input your next move: `).toLowerCase().trim())
-    }
-
-}
